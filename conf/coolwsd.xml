@@ -184,6 +184,10 @@
         <filesystem allow="false" />
         <wopi desc="Allow/deny wopi storage." allow="true">
             <host desc="Regex pattern of hostname to allow or deny." allow="true">__NEXTCLOUD_DOMAIN__</host>
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_1__</host>
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_2__</host>
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_3__</host>
+            <host desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_4__</host>
             <host desc="Regex pattern of hostname to allow or deny." allow="true">10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}</host>
             <host desc="Regex pattern of hostname to allow or deny." allow="true">172\.1[6789]\.[0-9]{1,3}\.[0-9]{1,3}</host>
             <host desc="Regex pattern of hostname to allow or deny." allow="true">172\.2[0-9]\.[0-9]{1,3}\.[0-9]{1,3}</host>
