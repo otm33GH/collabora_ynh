@@ -9,13 +9,6 @@ services = ["__APP__"]
 name.en = "Extra domains"
 name.fr = "Domaines supplémentaires"
 
-[main.add_domains.nextcloud_domain]
-ask.fr = "Domaine nextcloud actuel"
-ask.en = "Current nextcloud domain"
-default = ""
-type = "string"
-bind = ":/etc/coolwsd/coolwsd.xml"
-
 [main.add_domains.extra_domain_1]
 ask.fr = "Premier domaine supplémentaire"
 ask.en = "First extra domain"
