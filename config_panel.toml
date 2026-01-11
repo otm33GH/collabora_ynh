@@ -5,6 +5,13 @@ name.en = "Configuration panel"
 name.fr = "Panneau de configuration"
 services = ["__APP__"]
 
+[main.add_domains.nextcloud_domain]
+ask.fr = "Domaine nextcloud actuel"
+ask.en = "Current nextcloud domain"
+default = ""
+type = "string"
+bind = "config>storage>wopi>host:/etc/coolwsd/coolwsd.xml"
+
 [main.add_domains]
 name.en = "Extra domains"
 name.fr = "Domaines supplémentaires"
@@ -15,7 +22,7 @@ ask.en = "First extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = ":/etc/coolwsd/coolwsd.xml"
+bind = "config>storage>wopi>host:/etc/coolwsd/coolwsd.xml"
 
 [main.add_domains.extra_domain_2]
 ask.fr = "Deuxième domaine supplémentaire"
@@ -23,7 +30,7 @@ ask.en = "Second extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = ":/etc/coolwsd/coolwsd.xml"
+bind = "config>storage>wopi>host:/etc/coolwsd/coolwsd.xml"
 
 [main.add_domains.extra_domain_3]
 ask.fr = "Troisième domaine supplémentaire"
@@ -31,7 +38,7 @@ ask.en = "Third extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = ":/etc/coolwsd/coolwsd.xml"
+bind = "config>storage>wopi>host:/etc/coolwsd/coolwsd.xml"
 
 [main.add_domains.extra_domain_4]
 ask.fr = "Quatrième domaine supplémentaire"
@@ -39,4 +46,4 @@ ask.en = "Fourth extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = ":/etc/coolwsd/coolwsd.xml"
+bind = "config>storage>wopi>host:/etc/coolwsd/coolwsd.xml"
