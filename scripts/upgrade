@@ -13,6 +13,12 @@ ynh_script_progression "Stopping $app's systemd service..."
 
 ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd" --wait_until="Stopped coolwsd.service - Collabora Online WebSocket Daemon"
 
+ynh_app_setting_get --key=nextcloud_domain 
+ynh_app_setting_get --key=extra_domain_1 
+ynh_app_setting_get --key=extra_domain_2 
+ynh_app_setting_get --key=extra_domain_3 
+ynh_app_setting_get --key=extra_domain_4 
+
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
