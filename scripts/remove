@@ -19,6 +19,8 @@ ynh_config_remove_systemd --service="coolwsd"
 ynh_config_remove_nginx
 
 ynh_safe_rm "/etc/coolwsd"
+ynh_safe_rm "/lib/systemd/system/coolwsd.service"
+systemctl daemon-reload
 
 # FIXME: is it still required?
 # Fix "rm: cannot remove '/etc/apt/apt.conf.d/25loolwsd': No such file or directory"
