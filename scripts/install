@@ -64,7 +64,7 @@ ynh_script_progression "Adding system configurations related to $app..."
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
 
-yunohost service add "coolwsd" --description="Collabora online office suite" --log="/var/log/$app/$app.log"
+# yunohost service add "coolwsd" --description="Collabora online office suite" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -76,7 +76,7 @@ ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd"
 # The service installed by the deb package failed in loop, thus the reset-failed.
 systemctl reset-failed coolwsd
 
-ynh_systemctl --service="coolwsd" --action="start" --log_path="systemd" --wait_until="Ready to accept connections" --port=$port
+ynh_systemctl --service="coolwsd" --action="start" --log_path="systemd" --wait_until="Ready to accept connections"
 
 #=================================================
 # END OF SCRIPT
