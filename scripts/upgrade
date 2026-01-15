@@ -66,10 +66,11 @@ else
 fi
 
 ynh_config_add --template="coolwsd.xml" --destination="/etc/coolwsd/coolwsd.xml"
-ynh_config_add --template="collabora.env" --destination="/etc/coolwsd/.env"
+ynh_config_add --template="00-coolwsd.patch" --destination="/etc/coolwsd/00-coolwsd.patch"
 
 chmod 640 "/etc/coolwsd/coolwsd.xml"
-chmod 640 "/etc/coolwsd/.env"
+chmod 640 "/etc/coolwsd/00-coolwsd.patch"
+chown cool:root -R /etc/coolwsd
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
