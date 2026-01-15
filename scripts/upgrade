@@ -9,7 +9,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
-ynh_script_progression "Stopping ${app}'s systemd service..."
+ynh_script_progression "Stopping ${app} systemd service..."
 
 ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd" --wait_until="Stopped coolwsd.service - Collabora Online WebSocket Daemon"
 
@@ -91,7 +91,7 @@ ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd"
 sudo patch /lib/systemd/system/coolwsd.service < $install_dir/00-coolwsd.patch
 systemctl daemon-reload
 
-ynh_script_progression "Starting ${app}'s systemd service..."
+ynh_script_progression "Starting ${app} systemd service..."
 
 ynh_systemctl --service="coolwsd" --action="restart" --log_path="systemd" --wait_until="Ready to accept connections"
 
