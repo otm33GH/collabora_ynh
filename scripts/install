@@ -50,10 +50,10 @@ fi
 
 mkdir -p /etc/coolwsd
 ynh_config_add --template="coolwsd.xml" --destination="/etc/coolwsd/coolwsd.xml"
-ynh_config_add --template="collabora.env" --destination="/etc/coolwsd/.env"
+ynh_config_add --template="00-coolwsd.patch" --destination="/etc/coolwsd/00-coolwsd.patch"
 
 chmod 640 "/etc/coolwsd/coolwsd.xml"
-chmod 640 "/etc/coolwsd/.env"
+chmod 640 "/etc/coolwsd/00-coolwsd.patch"
 chown cool:root -R /etc/coolwsd
 
 #=================================================
@@ -66,6 +66,7 @@ ynh_config_add_nginx
 
 yunohost service add "coolwsd" --description="Collabora online office suite" --log="/var/log/$app/$app.log"
 
+
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
@@ -73,6 +74,10 @@ ynh_script_progression "Starting $app's systemd service..."
 
 # NB. : we need a stupid *re*start because the service is in fact already started during the damn package install ... so it won't find a recent "Ready to accept connection" match ...
 ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd"
+
+# Apply patch 
+sudo patch /lib/systemd/system/coolwsd.service < 00-coolwsd.patch
+
 # The service installed by the deb package failed in loop, thus the reset-failed.
 systemctl reset-failed coolwsd
 
