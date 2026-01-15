@@ -189,19 +189,19 @@
                 </group>
 
                 <group>
-                        <host id="1" desc="Regex pattern of hostname to allow or deny." allow="true"></host>
+                        <host id="1" desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_1__</host>
                 </group>
 
                 <group>
-                        <host id="2" desc="Regex pattern of hostname to allow or deny." allow="true"></host>
+                        <host id="2" desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_2__</host>
                 </group>
 
                 <group>
-                        <host id="3" desc="Regex pattern of hostname to allow or deny." allow="true"></host>
+                        <host id="3" desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_3__</host>
                 </group>
 
                 <group>
-                        <host id="4" desc="Regex pattern of hostname to allow or deny." allow="true"></host>
+                        <host id="4" desc="Regex pattern of hostname to allow or deny." allow="true">__EXTRA_DOMAIN_4__</host>
                 </group>
 
                 <group>
