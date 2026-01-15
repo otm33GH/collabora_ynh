@@ -28,7 +28,7 @@ chown -R "$app:www-data" "$install_dir"
 chmod 640 "$install_dir/index.html"
 
 #=================================================
-# CONFIGURE ONLYOFFICE
+# CONFIGURE COLLABORA
 #=================================================
 ynh_script_progression "Installing config file..."
 
@@ -50,7 +50,7 @@ fi
 
 mkdir -p /etc/coolwsd
 ynh_config_add --template="coolwsd.xml" --destination="/etc/coolwsd/coolwsd.xml"
-ynh_config_add --template="00-coolwsd.patch" --destination="/etc/coolwsd/00-coolwsd.patch"
+ynh_config_add --template="00-coolwsd.patch" --destination="$install_dir/00-coolwsd.patch"
 
 chmod 640 "/etc/coolwsd/coolwsd.xml"
 chmod 640 "/etc/coolwsd/00-coolwsd.patch"
