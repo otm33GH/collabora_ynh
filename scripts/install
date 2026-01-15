@@ -75,7 +75,8 @@ ynh_script_progression "Starting $app's systemd service..."
 ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd"
 
 # Apply patch 
-sudo patch /lib/systemd/system/coolwsd.service < "$install_dir"/00-coolwsd.patch
+sudo patch /lib/systemd/system/coolwsd.service < $install_dir/00-coolwsd.patch
+systemctl daemon-reload
 
 # The service installed by the deb package failed in loop, thus the reset-failed.
 systemctl reset-failed coolwsd
