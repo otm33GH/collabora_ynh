@@ -84,6 +84,13 @@ yunohost service add "coolwsd" --description="Collabora online office suite" --l
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
+
+
+# Apply patch
+
+ynh_systemctl --service="coolwsd" --action="stop" --log_path="systemd"
+sudo patch /lib/systemd/system/coolwsd.service < 00-coolwsd.patch
+
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="coolwsd" --action="restart" --log_path="systemd" --wait_until="Ready to accept connections"
