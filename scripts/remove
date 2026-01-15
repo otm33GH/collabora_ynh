@@ -27,6 +27,11 @@ systemctl daemon-reload
 # on apt remove
 touch /etc/apt/apt.conf.d/25loolwsd
 
+# Remove coolwsd packages
+
+sudo apt remove coolwsd code-brand
+sudo apt purge coolwsd code-brand
+
 #=================================================
 # END OF SCRIPT
 #=================================================
