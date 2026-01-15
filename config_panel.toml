@@ -10,7 +10,7 @@ ask.fr = "Domaine nextcloud actuel"
 ask.en = "Current nextcloud domain"
 default = ""
 type = "string"
-bind = "ALIASGROUP1:/etc/coolwsd/.env"
+bind = "null"
 
 [main.add_domains]
 name.en = "Extra domains"
@@ -22,7 +22,7 @@ ask.en = "First extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = "ALIASGROUP2:/etc/coolwsd/.env"
+bind = "null"
 
 [main.add_domains.extra_domain_2]
 ask.fr = "Deuxième domaine supplémentaire"
@@ -30,7 +30,7 @@ ask.en = "Second extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = "ALIASGROUP3:/etc/coolwsd/.env"
+bind = "null"
 
 [main.add_domains.extra_domain_3]
 ask.fr = "Troisième domaine supplémentaire"
@@ -38,7 +38,7 @@ ask.en = "Third extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = "ALIASGROUP4:/etc/coolwsd/.env"
+bind = "null"
 
 [main.add_domains.extra_domain_4]
 ask.fr = "Quatrième domaine supplémentaire"
@@ -46,4 +46,4 @@ ask.en = "Fourth extra domain"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
-bind = "ALIASGROUP5:/etc/coolwsd/.env"
+bind = "null"
