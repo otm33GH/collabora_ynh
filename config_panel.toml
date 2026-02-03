@@ -6,36 +6,38 @@ name.fr = "Panneau de configuration"
 services = ["coolwsd"]
 
 [main.add_domains]
-name.en = "Extra domains"
-name.fr = "Domaines supplémentaires"
+name.en = "Extra WOPI hosts"
+name.fr = "Hôtes WOPI supplémentaires"
+help.fr = "Domaines autorisés à utiliser Collabora"
+help.en = "Domains allowed to use Collabora"
 
 [main.add_domains.extra_domain_1]
-ask.fr = "Premier domaine supplémentaire"
-ask.en = "First extra domain"
+ask.fr = "Premier hôte supplémentaire"
+ask.en = "First extra host"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
 bind = "null"
 
 [main.add_domains.extra_domain_2]
-ask.fr = "Deuxième domaine supplémentaire"
-ask.en = "Second extra domain"
+ask.fr = "Deuxième hôte supplémentaire"
+ask.en = "Second extra host"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
 bind = "null"
 
 [main.add_domains.extra_domain_3]
-ask.fr = "Troisième domaine supplémentaire"
-ask.en = "Third extra domain"
+ask.fr = "Troisième hôte supplémentaire"
+ask.en = "Third extra host"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
 bind = "null"
 
 [main.add_domains.extra_domain_4]
-ask.fr = "Quatrième domaine supplémentaire"
-ask.en = "Fourth extra domain"
+ask.fr = "Quatrième hôte supplémentaire"
+ask.en = "Fourth extra host"
 type = "string"
 example = "nextcloud.example.com"
 default = ""
