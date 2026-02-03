@@ -40,12 +40,6 @@ ram.runtime = "600M"
     type = "group"
     default = "visitors"
 
-    [install.nextcloud_domain]
-    ask.en = "The domain of your Nextcloud instance"
-    ask.fr = "Le domain de votre instance Nextcloud"
-    type = "string"
-    example = "nextcloud.example.com"
-    default = ""
 
     [install.password]
     type = "password"
