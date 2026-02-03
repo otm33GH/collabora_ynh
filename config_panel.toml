@@ -5,13 +5,6 @@ name.en = "Configuration panel"
 name.fr = "Panneau de configuration"
 services = ["coolwsd"]
 
-[main.add_domains.nextcloud_domain]
-ask.fr = "Domaine nextcloud actuel"
-ask.en = "Current nextcloud domain"
-default = ""
-type = "string"
-bind = "null"
-
 [main.add_domains]
 name.en = "Extra domains"
 name.fr = "Domaines supplémentaires"
